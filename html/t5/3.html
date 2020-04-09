@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            求最大最小值
+        </title>
+        <script>
+            function calc_Mm() {
+                var n1 = Number(document.getElementById("num1").value);
+                var n2 = Number(document.getElementById("num2").value);
+                var Max = document.getElementById("Mnum");
+                var Min = document.getElementById("mnum");
+                Max.value = n1 >= n2 ? n1 : n2;
+                Min.value = n1 >= n2 ? n2 : n1;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>求最大值与最小值</h1>
+        <form action="">
+            第一个数<input type="text" name="num1" id="num1" /><br />
+            第二个数<input type="text" name="num2" id="num2" /><br />
+            最大值<input type="text" name="Mnum" id="Mnum" /><br />
+            最小值<input type="text" name="mnum" id="mnum" /><br />
+            <input type="button" value="开始" name="calc" onclick="calc_Mm()" />
+            <input type="reset" value="清空" name="reset" />
+        </form>
+    </body>
+</html>

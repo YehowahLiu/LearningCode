@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            计算1~100之和
+        </title>
+        <script>
+            function dosum() {
+                var s = document.getElementById("str1");
+                var i = 1;
+                var res = 0;
+                do {
+                    res += i;
+                    i++;
+                } while (i <= 100);
+                s.value = "1~100之和为:" + String(res);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>计算1~100之和</h1>
+        <form action="">
+            <input type="text" id="str1" name="str1" /><br />
+            <input type="button" value="计算" onclick="dosum()" />
+        </form>
+    </body>
+</html>

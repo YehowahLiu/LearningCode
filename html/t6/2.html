@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            判断素数
+        </title>
+        <script>
+            function isP() {
+                var n = Number(document.getElementById("num1").value);
+                var ans = document.getElementById("res");
+                var i = 3;
+                var flag = true;
+                while (i * i <= n) {
+                    if (n % i == 0) {
+                        flag = false;
+                        break;
+                    }
+                    i += 2;
+                }
+                ans.value = flag ? "是素数" : "不是素数";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>判断素数</h1>
+        <form action="">
+            整数<input type="text" name="num1" id="num1" /><br />
+            结果<input type="text" name="res" id="res" /><br />
+            <input type="button" value="计算" onclick="isP()" />
+            &nbsp;&nbsp;
+            <input type="reset" value="清空" />
+        </form>
+    </body>
+</html>

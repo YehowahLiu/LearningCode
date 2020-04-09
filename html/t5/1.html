@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>计算圆的周长和面积</title>
+        <script>
+            function MyFunc() {
+                var r = parseFloat(document.getElementById("R").value);
+                var L = document.getElementById("length");
+                var S = document.getElementById("area");
+                L.value = 2 * Math.PI * r;
+                S.value = Math.PI * r * r;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            圆的周长和面积
+        </h1>
+        <form>
+            半径:<input id="R" type="text" /><br />
+            周长:<input id="length" type="text" /><br />
+            面积:<input id="area" type="text" /><br />
+            <input type="button" name="calc" value="计算" onclick="MyFunc()" />
+            <input type="reset" name="reset" value="重置" />
+        </form>
+    </body>
+</html>

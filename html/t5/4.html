@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>字符串复制</title>
+        <script>
+            function strcopy() {
+                var s1 = document.getElementById("str1").value;
+                var s2 = document.getElementById("str2");
+                s2.value = s1;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>字符串复制</h1>
+        <form>
+            输入<input type="text" name="str1" id="str1" /><br />
+            重复<input type="text" name="str2" id="str2" /><br />
+            <input
+                type="button"
+                name="start"
+                value="开始"
+                onclick="strcopy()"
+            />
+            <input type="reset" name="clear" value="清空" />
+        </form>
+    </body>
+</html>

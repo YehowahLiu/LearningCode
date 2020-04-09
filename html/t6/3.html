@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>计算阶乘</title>
+        <script>
+            function dofact(n, total) {
+                return n == 1 ? total : dofact(n - 1, n * total);
+            }
+            function fact() {
+                var n1 = Number(document.getElementById("num1").value);
+                var ans = document.getElementById("res");
+                ans.value = dofact(n1, 1);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>计算阶乘</h1>
+        <form action="">
+            整数<input type="text" id="num1" /><br />
+            结果<input type="text" id="res" /><br />
+            <input type="button" value="计算" onclick="fact()" />&nbsp;&nbsp;
+            <input type="reset" value="清空" />
+        </form>
+    </body>
+</html>
