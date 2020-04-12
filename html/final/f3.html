@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>计算f(x)</title>
+        <script type="text/javascript">
+            function calc() {
+                var x = Number(document.getElementById("in").value);
+                var res = document.getElementById("out");
+                var ans = 0,
+                    flag = 1,
+                    crtx = x;
+                for (var i = 1; Math.abs(crtx) > 1e-7; i++) {
+                    crtx = (flag * Math.pow(x, 2 * i - 1)) / (2 * i - 1);
+                    ans += crtx;
+                    flag *= -1;
+                }
+                res.value = ans;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>计算f(x)</h1>
+        <form action="">
+            输入x=<input type="text" name="输入" id="in" /><br />
+            f(x)=<input type="text" name="输出" id="out" /><br />
+            <input
+                type="button"
+                value="计算"
+                onclick="calc()"
+            />&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" />
+        </form>
+    </body>
+</html>
