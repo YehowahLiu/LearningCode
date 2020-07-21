@@ -25,7 +25,9 @@ public class DateUtil {
     }
 
     static int getDayOfWeek(int year, int month, int day) {
-        // returns the day of the week,0 for SUN, 1 for MON...
+        // returns the day of the week,0 for SUN, 1 for MON, and -1 for invalid date
+        if (!isValidDate(year, month, day))
+            return -1;
         final int[] MonthTableNL = { 0, 0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5 };
         final int[] MonthTableL = { 0, 6, 2, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5 };
         int out = isLeapYear(year) ? MonthTableL[month] : MonthTableNL[month];

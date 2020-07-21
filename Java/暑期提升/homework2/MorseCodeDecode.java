@@ -4,13 +4,18 @@ import java.util.Scanner;
 
 public class MorseCodeDecode {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner in = new Scanner(new File("encode.txt"));
+        // 从文件获取输入
+        String filename = "encode.txt";// 默认获取输入的文件名
+        if (args.length != 0)
+            filename = args[0];// 如果有文件名作为参数传入，则获取该文件作为输入
+        Scanner in = new Scanner(new File(filename));
         String input = in.nextLine();
         in.close();
-        // System.out.printf("input:%s\nlength of input:%d\n", input, input.length());
-        StringBuffer c = new StringBuffer();
-        StringBuffer output = new StringBuffer();
-        int state = 0;
+
+        StringBuffer c = new StringBuffer();// 正在处理的摩斯码的缓存
+        StringBuffer output = new StringBuffer();// 输出结果的缓存
+        int state = 0;// 记录空格出现次数用于确认单词的结束
+
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == ' ') {
                 state++;
@@ -31,6 +36,7 @@ public class MorseCodeDecode {
     }
 
     private static char MorseToChar(String s) {
+        // 单个字符的摩斯码对应处理
         switch (s) {
             case ".-":
                 return 'A';
