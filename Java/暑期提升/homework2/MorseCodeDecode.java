@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class MorseCodeDecode {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner in = new Scanner(new File("encode.txt"));
-        String input = in.next();
+        String input = in.nextLine();
         in.close();
+        // System.out.printf("input:%s\nlength of input:%d\n", input, input.length());
         StringBuffer c = new StringBuffer();
         StringBuffer output = new StringBuffer();
         int state = 0;
