@@ -1,4 +1,5 @@
 # LearningCode
+
 **This is my private code repo.**
 
 **这是我的私人代码仓库.**
@@ -9,4 +10,4 @@
 
 **Also to practice using git.**
 
-**同时也用来练习使用git.**
+**同时也用来练习使用 git.**
