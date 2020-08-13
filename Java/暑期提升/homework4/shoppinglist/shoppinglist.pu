@@ -1,0 +1,26 @@
+@startuml shoppinglist
+class Item{
+    - String name
+    - double price
+    - int stackNum
+    - double stackPrice
+    + void setItem(String name, double price)
+    + void setItem(String name, double price, int stackNum, double stackPrice)
+    + void setName(String name)
+    + void setPrice(double price)
+    + void setStackNum(int stackNum)
+    + void setStackPrice(double stackPrice)
+    + String getName()
+    + double getPrice()
+    + int getStackNum()
+    + double getStackPrice()
+}
+
+class ItemOrder{
+    - Item item
+    - int quantity
+    + void setQuantity(int quantity)
+    + int getQuantity()
+    + double getOrderPrice()
+}
+@enduml
