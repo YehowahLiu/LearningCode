@@ -1,5 +1,7 @@
 {
     "files.associations": {
         "cmath": "cpp"
-    }
+    },
+    "python.pythonPath": "/usr/bin/python3",
+    "python.formatting.provider": "black"
 }
